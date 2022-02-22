@@ -29,13 +29,14 @@ jobs:
         sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
         sudo pip install protobuf Beautifulsoup4 requests xmltodict lanzou-api colorama filetype chardet aligo protobuf six
         git clone https://${{ secrets._GITHUB_PERSONAL_NAME }}:${{ secrets._GITHUB_PERSONAL_TOKEN }}@github.com/${{ secrets._GITHUB_PERSONAL_NAME }}/${{ secrets._GITHUB_PERSONAL_REPO }}.git
-        cd MIUIPatch
+        cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         touch ./passWord.txt
         python ./pyscript/toolpy/config.py
 
     - name: auto UMSR
       run: |
-        sudo python ./pyscript/mainpy/autoUpdate.py
+        cd ${{ secrets._GITHUB_PERSONAL_REPO }}
+        sudo python ./${{ secrets._GITHUB_PERSONAL_REPO }}/pyscript/mainpy/autoUpdate.py
 
     #- name: Upload zip
     #  uses: actions/upload-artifact@main

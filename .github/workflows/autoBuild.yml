@@ -28,18 +28,20 @@ jobs:
         sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
         sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
         sudo pip install protobuf Beautifulsoup4 requests xmltodict lanzou-api colorama filetype chardet aligo protobuf six
-        git clone https://github.com/yanbuyu/MIUIPatch.git
-        cd MIUIPatch
+        git clone https://${{ secrets._GITHUB_PERSONAL_NAME }}:${{ secrets._GITHUB_PERSONAL_TOKEN }}@github.com/${{ secrets._GITHUB_PERSONAL_NAME }}/${{ secrets._GITHUB_PERSONAL_REPO }}.git
+        cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         touch ./passWord.txt
         python ./pyscript/toolpy/config.py
 
     - name: add framework-res
       run: |
+        cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         mkdir -p ./framework
         cp -af ./framework-res/*.apk ./framework
 
     - name: autoBuild
       run: |
+        cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         sudo python ./pyscript/mainpy/autoBuild.py
 
     #- name: Upload Apps
