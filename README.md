@@ -1,2 +1,2 @@
-# UpdateMagiskForSkkkRecovery
-Update Magisk For Skkk Recovery
+# AutoPlan
+Run github action.
