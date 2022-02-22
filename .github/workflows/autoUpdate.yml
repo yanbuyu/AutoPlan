@@ -36,7 +36,7 @@ jobs:
     - name: auto UMSR
       run: |
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
-        sudo python ./${{ secrets._GITHUB_PERSONAL_REPO }}/pyscript/mainpy/autoUpdate.py
+        sudo python ./pyscript/mainpy/autoUpdate.py
 
     #- name: Upload zip
     #  uses: actions/upload-artifact@main
