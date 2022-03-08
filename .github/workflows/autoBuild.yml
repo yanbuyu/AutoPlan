@@ -33,6 +33,13 @@ jobs:
         touch ./passWord.txt
         python ./pyscript/toolpy/config.py
 
+    - name: Delete workflow runs
+      uses: GitRML/delete-workflow-runs@main
+      continue-on-error: true
+      with:
+        retain_days: 3
+        keep_minimum_runs: 0
+
     - name: add framework-res
       run: |
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
