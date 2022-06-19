@@ -30,7 +30,7 @@ jobs:
         sudo -E apt-get install -y openjdk-17-jdk python3.10 python3-pip curl wget p7zip p7zip-full aria2 git
         sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
         sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
-        sudo pip install protobuf Beautifulsoup4 requests xmltodict lanzou-api colorama filetype chardet aligo protobuf six cryptography pyOpenSSL certifi
+        sudo pip install protobuf lxml Beautifulsoup4 requests xmltodict lanzou-api colorama filetype chardet aligo protobuf six cryptography pyOpenSSL certifi
         git clone https://${{ secrets._GITHUB_PERSONAL_NAME }}:${{ secrets._GITHUB_PERSONAL_TOKEN }}@github.com/${{ secrets._GITHUB_PERSONAL_NAME }}/${{ secrets._GITHUB_PERSONAL_REPO }}.git
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         touch ./passWord.txt
