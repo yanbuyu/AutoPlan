@@ -35,6 +35,9 @@ jobs:
         git clone https://${{ secrets._GITHUB_PERSONAL_NAME }}:${{ secrets._GITHUB_PERSONAL_TOKEN }}@github.com/${{ secrets._GITHUB_PERSONAL_NAME }}/${{ secrets._GITHUB_PERSONAL_REPO }}.git
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         touch ./passWord.txt
+        echo "${{ secrets._GITHUB_ALI_TOKEN }}" >./aliCloudToken.txt
+        echo "${{ secrets._GITHUB_LANZOU_COOKIES_START }}" >./lanzouCloudCookies.txt
+        echo "${{ secrets._GITHUB_LANZOU_COOKIES_END }}" >>./lanzouCloudCookies.txt
         python ./pyscript/toolpy/config.py
 
     - name: Delete workflow runs
