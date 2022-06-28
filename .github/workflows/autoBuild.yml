@@ -15,6 +15,7 @@ on:
 jobs:
   autoBuild:
     runs-on: ubuntu-20.04
+    timeout-minutes: 60
     steps:
     - name: Clone Repository
       uses: actions/checkout@v2
