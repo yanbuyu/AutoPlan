@@ -30,7 +30,8 @@ jobs:
         sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
         sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
         sudo pip install protobuf==3.20.0
-        sudo pip install lxml click asn1crypto Beautifulsoup4 requests xmltodict lanzou-api colorama filetype chardet aligo protobuf cryptography pyOpenSSL certifi
+        #lanzou-api 
+        sudo pip install lxml click asn1crypto Beautifulsoup4 requests xmltodict colorama filetype chardet aligo protobuf cryptography pyOpenSSL certifi
         git clone https://${{ secrets._GITHUB_PERSONAL_NAME }}:${{ secrets._GITHUB_PERSONAL_TOKEN }}@github.com/${{ secrets._GITHUB_PERSONAL_NAME }}/${{ secrets._GITHUB_PERSONAL_REPO }}.git
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         touch ./passWord.txt
