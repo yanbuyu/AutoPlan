@@ -31,7 +31,7 @@ jobs:
         sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
         ##修复root环境无法安装包的问题
         EM=$(sudo ls /usr/lib/python*/EXTERNALLY-MANAGED 2>/dev/null | sed -n '1p')
-        [ -f "$EM" ] && echo "sudo mv -f $EM ${EM}.bak
+        [ -f "$EM" ] && sudo mv -f $EM ${EM}.bak
         sudo pip install protobuf==3.20.0
         #lanzou-api
         sudo pip install requests_toolbelt
