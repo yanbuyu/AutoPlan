@@ -1,4 +1,4 @@
-name: autoUpdate
+name: appactions
 
 on: 
   repository_dispatch:
