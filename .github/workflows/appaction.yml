@@ -52,7 +52,7 @@ jobs:
         retain_days: 1
         keep_minimum_runs: 0
 
-    - name: auto UMSR
+    - name: auto run appactions.py
       run: |
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         sudo python ./pyscript/mainpy/appactions.py
