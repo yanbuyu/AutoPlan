@@ -4,9 +4,9 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
-# 定时触发编译 每两个小时一次
+# 每天从凌晨3点开始，每隔4小时执行一次（即在3:00, 7:00, 11:00, 15:00, 19:00, 23:00）
   schedule:
-    - cron: 0 0,1,6-23 * * *
+    - cron: 0 3,7,11,15,19,23 * * *
 
 # 点赞☆Star触发编译
 #  watch:
