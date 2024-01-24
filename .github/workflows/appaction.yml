@@ -35,7 +35,7 @@ jobs:
         sudo pip install protobuf==3.20.0
         #lanzou-api
         sudo pip install requests_toolbelt
-        sudo pip install lxml click asn1crypto Beautifulsoup4 requests xmltodict dicttoxml jsonpath colorama filetype chardet aligo protobuf cryptography pyOpenSSL certifi
+        sudo pip install lxml click asn1crypto Beautifulsoup4 requests xmltodict dicttoxml jsonpath colorama filetype chardet aligo protobuf cryptography pyOpenSSL certifi billiard
         git clone https://${{ secrets._GITHUB_PERSONAL_NAME }}:${{ secrets._GITHUB_PERSONAL_TOKEN }}@github.com/${{ secrets._GITHUB_PERSONAL_NAME }}/${{ secrets._GITHUB_PERSONAL_REPO }}.git
         cd ${{ secrets._GITHUB_PERSONAL_REPO }}
         touch ./passWord.txt
