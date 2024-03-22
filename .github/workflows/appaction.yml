@@ -44,6 +44,7 @@ jobs:
         echo "${{ secrets._GITHUB_LANZOU_COOKIES_END }}" >>./lanzouCloudCookies.txt
         echo "${{ secrets._GITHUB_123PAN_USENAME }}" >./123PanUseNameAndPassWord.txt
         echo "${{ secrets._GITHUB_123PAN_PASSWORD }}" >>./123PanUseNameAndPassWord.txt
+        echo "${{ secrets._GITHUB_123PAN_LOGINUUID }}" >>./123PanUseNameAndPassWord.txt
         echo "${{ secrets._GITHUB_123PAN_COOKIES }}" >>./pyscript/tool/pan123/123pan.txt
 
     - name: Delete workflow runs
